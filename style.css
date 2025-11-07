@@ -1,0 +1,106 @@
+/* Simple modern styling */
+:root{
+  --bg1: #0072ff;
+  --bg2: #00c6ff;
+  --card-bg: rgba(255,255,255,0.06);
+  --accent: #00e676;
+  --text: #e6f0ff;
+  --muted: rgba(230,240,255,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+  padding:24px;
+}
+
+.page{width:100%; max-width:520px;}
+
+/* Card */
+.card{
+  background:var(--card-bg);
+  border-radius:12px;
+  padding:22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  backdrop-filter: blur(6px);
+}
+
+.card-header h1{margin:0;font-size:1.4rem}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:0.9rem}
+
+.card-body{
+  margin-top:18px;
+  display:grid;
+  gap:10px;
+}
+
+label{font-size:0.85rem;color:var(--muted)}
+input[type="text"], select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.03);
+  color:var(--text);
+  font-size:1rem;
+  outline:none;
+}
+
+input::placeholder{color:rgba(255,255,255,0.35)}
+
+.buttons{
+  display:flex;
+  gap:8px;
+  margin-top:6px;
+}
+
+button{
+  flex:1;
+  padding:10px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+
+#convertBtn{
+  background:linear-gradient(90deg,var(--accent),#00bfa5);
+  color:#042;
+}
+
+button.muted{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+/* Result */
+#result{
+  margin-top:12px;
+  padding:12px;
+  border-radius:8px;
+  background:rgba(0,0,0,0.25);
+  color:var(--text);
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:1rem;
+}
+
+/* small footer */
+.card-footer{margin-top:12px;text-align:center;color:var(--muted);font-size:0.8rem}
+
+/* Responsive */
+@media (max-width:420px){
+  .page{padding:8px}
+  .card{padding:16px}
+}

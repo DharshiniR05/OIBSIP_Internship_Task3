@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="card">
+      <header class="card-header">
+        <h1>🌡️ Temperature Converter</h1>
+        <p class="subtitle">Convert between Celsius, Fahrenheit and Kelvin</p>
+      </header>
+
+      <section class="card-body">
+        <label for="temperature">Temperature</label>
+        <input id="temperature" type="text" inputmode="decimal" placeholder="Enter number (e.g. 25)" />
+
+        <label for="fromUnit">From</label>
+        <select id="fromUnit">
+          <option value="celsius">Celsius (°C)</option>
+          <option value="fahrenheit">Fahrenheit (°F)</option>
+          <option value="kelvin">Kelvin (K)</option>
+        </select>
+
+        <label for="toUnit">To (optional)</label>
+        <select id="toUnit">
+          <option value="all">All (°F & K)</option>
+          <option value="celsius">Celsius (°C)</option>
+          <option value="fahrenheit">Fahrenheit (°F)</option>
+          <option value="kelvin">Kelvin (K)</option>
+        </select>
+
+        <div class="buttons">
+          <button id="convertBtn">Convert</button>
+          <button id="clearBtn" class="muted">Clear</button>
+        </div>
+
+        <div id="result" aria-live="polite"></div>
+      </section>
+
+      <footer class="card-footer">
+        <small>Made for AICTE OASIS INFOBYTE — Level 1 Task</small>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
